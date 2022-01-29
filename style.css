@@ -1,0 +1,190 @@
+/* RESET */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body{
+    min-height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+/* /RESET */
+/* UTILITAIRE */
+.inverted{
+    filter: invert(1);
+}
+/* /UTILITAIRE */
+/* GENERIQUE */
+::selection {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+body{
+    background: linear-gradient(-45deg, #6e3625, #581730, #0e4357, #0f5847);
+	background-size: 400% 400%;
+    animation: bgAnimation 10s ease-in-out infinite alternate ;
+    /* ^ Animation bg ^ */
+
+    font-family: sans-serif;
+    color: white;
+    margin: 50px 70px;
+}
+@keyframes bgAnimation {
+
+    0%   { 
+        background-position: 0% 50%;
+    }
+    100%   { 
+        background-position: 100% 50%;
+    }
+}
+
+h1{
+    position: relative;
+    width: fit-content;
+    margin-bottom: 50px;
+    transform: translateX(-30px);
+}
+h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(10%,50%);
+
+    background-color: rgba(0, 0, 0, 0.281);
+    width: 100%;
+    height: 80%;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+h2::before,
+h2::after{
+    font-size: 15px;
+}
+h2::before{
+    content:"{ ";
+}
+h2::after{
+    content:" }";
+}
+
+p{
+    text-align: justify;
+}
+
+img {
+    user-select: none;
+}
+
+section{
+    margin-bottom: max(5%,100px);
+}
+
+#menuList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.445);
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 30px;
+    border-radius: 10px;
+}
+.menuItem{
+    transition: all .3s;
+    display: block;
+}
+.menuItem:hover{
+    transform: scale(1.05);
+    color: white;
+
+}
+
+P>img{
+    float: left;
+    max-width: 35px;
+    margin-right: 5px;
+}
+/* /GENERIQUE */
+
+/* SPECIFIQUE */
+    /* page cursus */
+#secSTI2D .sectionContent{
+    display: flex;
+    gap: max(10%,5px);
+    margin-bottom: max(5%,20px);
+}
+#secSTI2D .sectionContent>p:first-child{
+    flex: 0 1 70%;
+}
+#secSTI2D .sectionContent>p:last-child{
+    flex: 0 1 30%;
+}
+#secSTI2D .sectionContent #imgBakalorea{
+    width: 100%;
+}
+    /* page exppérience ro */
+    /* page contact */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background-color: rgba(255, 255, 255, 0.445);
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+/* /SPECIFIQUE */

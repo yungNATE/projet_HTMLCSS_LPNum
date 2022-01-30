@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacter Nathan Martinigol par Mail</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <nav>
-        <a href="#menuList" class="openMenu"></a>
-        <ul id="menuList">
-            <li>
-                <a class="menuItem" href="./cursus.html">Cursus</a>
-            </li>
-            <li>
-                <a class="menuItem" href="./exppro.html">Expérience Pro</a>
-            </li>
-            <li>
-                <a class="menuItem" href="./contact.html">Contact</a>
-            </li>
-        </ul>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.onload = function () {
+        var menuOpener = document.querySelector("#menuOpener");
+        var menuList = document.querySelector("#menuList");
+        menuOpener.addEventListener("click", function () {
+          menuList.classList.toggle("menuListResponsive_opened");
+          menuOpener.classList.toggle("menuOpenerResponsive_opened");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <nav id="menu">
+      <button id="menuOpener" class="openMenu">Menu</button>
+      <ul id="menuList">
+        <li>
+          <a class="menuItem" href="./cursus.html">Cursus</a>
+        </li>
+        <li>
+          <a class="menuItem" href="./exppro.html">Expérience Pro</a>
+        </li>
+        <li>
+          <a class="menuItem" href="./contact.html">Contact</a>
+        </li>
+      </ul>
     </nav>
 
     <h1>Me contacter</h1>
 
-    <form action="monTravailSarreteALIntegration.html">
+    <form id="contactForm" action="monTravailSarreteALIntegration.html">
+      <label for="fname">Prénom</label>
+      <input
+        type="text"
+        id="fname"
+        name="firstname"
+        placeholder="Jonathan..."
+      />
 
-        <label for="fname">Prénom</label>
-        <input type="text" id="fname" name="firstname" placeholder="Jonathan...">
-    
-        <label for="lname">Nom</label>
-        <input type="text" id="lname" name="lastname" placeholder="Cohen...">
-    
-        <label for="subject">Écrivez-moi un petit message !</label>
-        <textarea id="subject" name="subject" placeholder="Un petit message..." ></textarea>
-    
-        <input type="submit" value="Submit">
-    
-      </form>
-    </div>
-</body>
+      <label for="lname">Nom</label>
+      <input type="text" id="lname" name="lastname" placeholder="Cohen..." />
+
+      <label for="subject">Écrivez-moi un petit message !</label>
+      <textarea
+        id="subject"
+        name="subject"
+        placeholder="Un petit message..."
+      ></textarea>
+
+      <input class="coloredBG" type="submit" value="Submit" />
+    </form>
+  </body>
 </html>

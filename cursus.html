@@ -1,94 +1,164 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Découvrir le parcours scolaire de Nathan Martinigol</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <nav>
-        <a href="#menuList" class="openMenu"></a>
-        <ul id="menuList">
-            <li>
-                <a class="menuItem" href="./cursus.html">Cursus</a>
-            </li>
-            <li>
-                <a class="menuItem" href="./exppro.html">Expérience Pro</a>
-            </li>
-            <li>
-                <a class="menuItem" href="./contact.html">Contact</a>
-            </li>
-        </ul>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.onload = function () {
+        var menuOpener = document.querySelector("#menuOpener");
+        var menuList = document.querySelector("#menuList");
+        menuOpener.addEventListener("click", function () {
+          menuList.classList.toggle("menuListResponsive_opened");
+          menuOpener.classList.toggle("menuOpenerResponsive_opened");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <nav id="menu">
+      <button id="menuOpener" class="openMenu">Menu</button>
+      <ul id="menuList">
+        <li>
+          <a class="menuItem" href="./cursus.html">Cursus</a>
+        </li>
+        <li>
+          <a class="menuItem" href="./exppro.html">Expérience Pro</a>
+        </li>
+        <li>
+          <a class="menuItem" href="./contact.html">Contact</a>
+        </li>
+      </ul>
     </nav>
 
     <h1>Mon parcours scolaire</h1>
 
     <section id="secSTI2D">
-        <h2>Le bakaloréa : Science et technologie de l'industrie et du développement durable</h2>
-        <div class="texte">
-            <p>
-                <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-study-high-school-flatart-icons-flat-flatarticons-1.png" alt="Pictogramme diplome">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-            </p>
-            <p>
-                <img class="inverted" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-study-high-school-flatart-icons-flat-flatarticons-1.png" alt="Pictogramme diplome">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-            </p>
-        </div>
-        <img id="" src="http://place-puppy.com/1500x500" alt="Placeholder Puppy">
+      <h2>
+        Le bakaloréa : Science et technologie de l'industrie et du développement
+        durable
+      </h2>
+      <div class="sectionContent">
+        <p>
+          <img
+            class="icone"
+            src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-study-high-school-flatart-icons-flat-flatarticons-1.png"
+            alt="Pictogramme diplome"
+          />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In aliquid
+          sit eveniet deleniti laboriosam quisquam! Excepturi sequi labore
+          expedita rem voluptatum amet, ex quam adipisci, animi dignissimos
+          repellat numquam sapiente? Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. In aliquid sit eveniet deleniti laboriosam quisquam!
+          Excepturi sequi labore expedita rem voluptatum amet, ex quam adipisci,
+          animi dignissimos repellat numquam sapiente? Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. In aliquid sit eveniet deleniti
+          laboriosam quisquam! Excepturi sequi labore expedita rem voluptatum
+          amet, ex quam adipisci, animi dignissimos repellat numquam sapiente?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In aliquid
+          sit eveniet deleniti laboriosam quisquam! Excepturi sequi labore
+          expedita rem voluptatum amet, ex quam adipisci, animi dignissimos
+          repellat numquam sapiente?
+        </p>
+        <p>
+          <img
+            class="icone inverted"
+            src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-study-high-school-flatart-icons-flat-flatarticons-1.png"
+            alt="Pictogramme diplome"
+          />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In aliquid
+          sit eveniet deleniti laboriosam quisquam! Excepturi sequi labore
+          expedita rem voluptatum amet, ex quam adipisci, animi dignissimos
+          repellat numquam sapiente?
+        </p>
+      </div>
+      <img
+        id="imgBakalorea"
+        src="http://place-puppy.com/1500x200"
+        alt="Placeholder Puppy"
+      />
     </section>
-    <section id="secSTI2D">
-        <h2>Le déuté : Informatique</h2>
-        <div class="texte">
-            <p>
-                <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-study-high-school-flatart-icons-flat-flatarticons-1.png" alt="Pictogramme diplome">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-            </p>
-            <p>
-                <img class="inverted" src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-study-high-school-flatart-icons-flat-flatarticons-1.png" alt="Pictogramme diplome">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                In aliquid sit eveniet deleniti laboriosam quisquam! Excepturi 
-                sequi labore expedita rem voluptatum amet, ex quam adipisci, 
-                animi dignissimos repellat numquam sapiente?
-            </p>
-        </div>
-        <img id="" src="http://place-puppy.com/1500x500" alt="Placeholder Puppy">
+    <section id="secDUT">
+      <h2>Le déuté : Informatique</h2>
+      <div class="sectionContent">
+        <p>
+          <img
+            class="icone"
+            src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-study-high-school-flatart-icons-flat-flatarticons-1.png"
+            alt="Pictogramme diplome"
+          />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In aliquid
+          sit eveniet deleniti laboriosam quisquam! Excepturi sequi labore
+          expedita rem voluptatum amet, ex quam adipisci, animi dignissimos
+          repellat numquam sapiente? Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. In aliquid sit eveniet deleniti laboriosam quisquam!
+          Excepturi sequi labore expedita rem voluptatum amet, ex quam adipisci,
+          animi dignissimos repellat numquam sapiente? Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. In aliquid sit eveniet deleniti
+          laboriosam quisquam! Excepturi sequi labore expedita rem voluptatum
+          amet, ex quam adipisci, animi dignissimos repellat numquam sapiente?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In aliquid
+          sit eveniet deleniti laboriosam quisquam! Excepturi sequi labore
+          expedita rem voluptatum amet, ex quam adipisci, animi dignissimos
+          repellat numquam sapiente?
+        </p>
+        <p>
+          <img
+            id="imgDeute"
+            src="http://place-puppy.com/1000x200"
+            alt="Placeholder Puppy"
+          />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          deleniti numquam modi? Illum magnam excepturi culpa sed quibusdam
+          optio incidunt nisi odio! Nisi debitis, facere beatae quaerat
+          laudantium ipsam distinctio?
+        </p>
+      </div>
     </section>
-</body>
+    <section id="secLP">
+      <h2>La ailpé : Numérique</h2>
+      <div class="sectionContent">
+        <img
+          id="imgailpe"
+          src="http://place-puppy.com/500x500"
+          alt="Placeholder Puppy"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          deleniti numquam modi? Illum magnam excepturi culpa sed quibusdam
+          optio incidunt nisi odio! Nisi debitis, facere beatae quaerat
+          laudantium ipsam distinctio? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Blanditiis deleniti numquam modi? Illum magnam
+          excepturi culpa sed quibusdam optio incidunt nisi odio! Nisi debitis,
+          facere beatae quaerat laudantium ipsam distinctio? Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Blanditiis deleniti numquam
+          modi? Illum magnam excepturi culpa sed quibusdam optio incidunt nisi
+          odio! Nisi debitis, facere beatae quaerat laudantium ipsam distinctio?
+        </p>
+        <p>
+          <img
+            class="icone"
+            src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/344/external-study-high-school-flatart-icons-flat-flatarticons-1.png"
+            alt="Pictogramme diplome"
+          />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In aliquid
+          sit eveniet deleniti laboriosam quisquam! Excepturi sequi labore
+          expedita rem voluptatum amet, ex quam adipisci, animi dignissimos
+          repellat numquam sapiente? Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. In aliquid sit eveniet deleniti laboriosam quisquam!
+          Excepturi sequi labore expedita rem voluptatum amet, ex quam adipisci,
+          animi dignissimos repellat numquam sapiente? Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. In aliquid sit eveniet deleniti
+          laboriosam quisquam! Excepturi sequi labore expedita rem voluptatum
+          amet, ex quam adipisci, animi dignissimos repellat numquam sapiente?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In aliquid
+          sit eveniet deleniti laboriosam quisquam! Excepturi sequi labore
+          expedita rem voluptatum amet, ex quam adipisci, animi dignissimos
+          repellat numquam sapiente?
+        </p>
+      </div>
+    </section>
+  </body>
 </html>

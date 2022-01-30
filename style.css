@@ -198,6 +198,10 @@ section::after {
   transform: scale(1.05);
   color: white;
 }
+.menuItem.active {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 700px) {
   #menuOpener {
     display: block;

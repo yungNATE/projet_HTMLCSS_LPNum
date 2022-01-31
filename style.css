@@ -66,6 +66,11 @@ body {
   color: white;
   margin: 50px 70px;
 }
+@media screen and (max-width: 700px) {
+  body {
+    margin: 50px 20px;
+  }
+}
 @keyframes bgAnimation {
   0% {
     background-position: 0% 50%;
@@ -80,6 +85,11 @@ h1 {
   width: fit-content;
   margin-bottom: 50px;
   transform: translateX(-30px);
+}
+@media screen and (max-width: 700px) {
+  h1 {
+    transform: none;
+  }
 }
 h1::before {
   content: "";
@@ -118,7 +128,7 @@ img {
   user-select: none;
 }
 
-section {
+section:not(:last-of-type) {
   --marge: 200px;
   --epaisseur: 2px;
   position: relative;

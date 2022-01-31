@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacter Nathan Martinigol par Mail</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/dotty/344/internet.png" />
     <link rel="stylesheet" href="style.css" />
     <script>
       window.onload = function () {
@@ -14,7 +15,6 @@
             document.URL.split("/").at(-1) /* => page courante */ +
             '"]'
         );
-        console.log(document.URL.split("/").at(-1));
         currentLinks.forEach(function (link) {
           link.classList.add("active");
         });
@@ -22,9 +22,16 @@
         // gérer le menu responsive
         var menuOpener = document.querySelector("#menuOpener");
         var menuList = document.querySelector("#menuList");
-        menuOpener.addEventListener("click", function () {
+        menuOpener.addEventListener("click", function() {
           menuList.classList.toggle("menuListResponsive_opened");
           menuOpener.classList.toggle("menuOpenerResponsive_opened");
+        });
+
+        // gestion du submit
+        form = document.querySelector('#contactForm');
+        form.addEventListener("submit", function() {
+          alert('Le message a bien été passé, promis ;)');
+          console.log("toto");
         });
       };
     </script>
@@ -47,23 +54,25 @@
 
     <h1>Me contacter</h1>
 
-    <form id="contactForm" action="monTravailSarreteALIntegration.html">
+    <form id="contactForm" action="contact.html">
       <label for="fname">Prénom</label>
       <input
         type="text"
         id="fname"
         name="firstname"
         placeholder="Jonathan..."
+        required
       />
 
       <label for="lname">Nom</label>
-      <input type="text" id="lname" name="lastname" placeholder="Cohen..." />
+      <input type="text" id="lname" name="lastname" placeholder="Cohen..." required />
 
       <label for="subject">Écrivez-moi un petit message !</label>
       <textarea
         id="subject"
         name="subject"
         placeholder="Un petit message..."
+        required
       ></textarea>
 
       <input class="coloredBG" type="submit" value="Submit" />

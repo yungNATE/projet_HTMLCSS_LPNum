@@ -163,7 +163,7 @@ section::after {
 
   width: 15px;
   aspect-ratio: 1/1;
-  border: var(--epaisseur) dashed white;
+  border: var(--epaisseur) dotted white;
   border-radius: 50%;
 }
 

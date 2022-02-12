@@ -65,6 +65,7 @@ body {
   font-family: sans-serif;
   color: white;
   margin: 50px 70px;
+  transition: margin 0.3s;
 }
 @media screen and (max-width: 700px) {
   body {
@@ -176,6 +177,8 @@ section::after {
   border: none;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 20px;
+  cursor: pointer;
 }
 #menuOpener.menuOpenerResponsive_opened {
   border-radius: 5px 5px 0 0;
@@ -294,8 +297,8 @@ p > img.icone {
 #expproList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: min(5%, 20px);
-  grid-row-gap: min(5%, 20px);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 @media screen and (max-width: 1400px) {
   #expproList {
@@ -318,7 +321,6 @@ p > img.icone {
   transition: transform 0.3s;
 }
 #expproList li {
-  padding: 25px;
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
@@ -326,6 +328,10 @@ p > img.icone {
   transform: scale(1.05);
   background-color: rgb(0, 0, 0, 0.3);
   border-radius: 10px;
+}
+#expproList li > a {
+  padding: 25px;
+  display: block;
 }
 #expproList img {
   border-radius: 5px;
@@ -351,6 +357,19 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
   background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+input[type="text"]:hover,
+select:hover,
+textarea:hover {
+  background-color: rgba(105, 105, 105, 0.5);
+}
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  background-color: rgba(42, 42, 42, 0.5);
+  border-color: rgb(66, 66, 66);
+  color: white;
 }
 
 input[type="submit"] {
@@ -360,10 +379,13 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: filter 0.3s, transform 0.3s;
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  filter: drop-shadow(4px 4px 7px black);
+  transform: translateY(-0.25em);
 }
 
 /* /SPECIFIQUE */

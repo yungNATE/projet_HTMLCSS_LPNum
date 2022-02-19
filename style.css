@@ -208,7 +208,7 @@ section::after {
   display: block;
 }
 .menuItem:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   color: white;
 }
 .menuItem.active {
@@ -316,20 +316,74 @@ p > img.icone {
   }
 }
 
-#expproList li,
+#expproList > li,
 #expproList img {
   transition: transform 0.3s;
 }
-#expproList li {
+#expproList > li {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 10px;
+  position: relative;
 }
-#expproList li:hover {
+#expproList > li:hover {
   transform: scale(1.05);
   background-color: rgb(0, 0, 0, 0.3);
   border-radius: 10px;
 }
-#expproList li > a {
+
+#expproList > li .cats {
+  --bg-color: rgba(240, 248, 255, 0.65);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--bg-color);
+  /* Attention, la propriété backdrop-filter n'est pas supportée sur firefox sans activer certains flags ! */
+  backdrop-filter: blur(2px);
+  color: rgb(35, 39, 41);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 80%;
+}
+#expproList > li .cats::after {
+  --width: 7px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, 100%);
+
+  width: 0;
+  height: 0;
+  border-left: var(--width) solid transparent;
+  border-right: var(--width) solid transparent;
+
+  border-top: var(--width) solid var(--bg-color);
+}
+#expproList > li:hover .cats {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -100%);
+}
+#expproList > li .cats li:not(:last-child)::after {
+  content: "-";
+  margin: 5px;
+}
+
+#expproList > li > a {
   padding: 25px;
   display: block;
 }
@@ -337,7 +391,7 @@ p > img.icone {
   border-radius: 5px;
   width: 100%;
 }
-#expproList li:hover img {
+#expproList > li:hover img {
   transform: scale(1.05);
 }
 /* page contact */

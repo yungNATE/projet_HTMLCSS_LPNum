@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacter Nathan Martinigol par Mail</title>
-    <link rel="icon" type="image/png" href="https://img.icons8.com/dotty/344/internet.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://img.icons8.com/color/344/staring.png"
+    />
     <link rel="stylesheet" href="style.css" />
     <script>
       window.onload = function () {
@@ -22,15 +26,15 @@
         // gérer le menu responsive
         var menuOpener = document.querySelector("#menuOpener");
         var menuList = document.querySelector("#menuList");
-        menuOpener.addEventListener("click", function() {
+        menuOpener.addEventListener("click", function () {
           menuList.classList.toggle("menuListResponsive_opened");
           menuOpener.classList.toggle("menuOpenerResponsive_opened");
         });
 
         // gestion du submit
-        form = document.querySelector('#contactForm');
-        form.addEventListener("submit", function() {
-          alert('Le message a bien été passé, promis ;)');
+        form = document.querySelector("#contactForm");
+        form.addEventListener("submit", function () {
+          alert("Le message a bien été passé, promis ;)");
           console.log("toto");
         });
       };
@@ -65,7 +69,13 @@
       />
 
       <label for="lname">Nom</label>
-      <input type="text" id="lname" name="lastname" placeholder="Cohen..." required />
+      <input
+        type="text"
+        id="lname"
+        name="lastname"
+        placeholder="Cohen..."
+        required
+      />
 
       <label for="subject">Écrivez-moi un petit message !</label>
       <textarea

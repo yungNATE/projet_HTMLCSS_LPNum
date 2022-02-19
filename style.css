@@ -348,8 +348,6 @@ p > img.icone {
   transform: translate(-50%, -50%);
 
   background-color: var(--bg-color);
-  /* Attention, la propriété backdrop-filter n'est pas supportée sur firefox sans activer certains flags ! */
-  backdrop-filter: blur(2px);
   color: rgb(35, 39, 41);
   font-size: 14px;
   font-weight: bold;

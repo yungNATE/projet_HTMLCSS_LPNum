@@ -55,6 +55,14 @@ body,
   background-size: 400% 400%;
   animation: bgAnimation 10s ease-in-out infinite alternate;
 }
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 /* /UTILITAIRE */
 /* GENERIQUE */
 ::selection {
@@ -70,14 +78,6 @@ body {
 @media screen and (max-width: 700px) {
   body {
     margin: 50px 20px;
-  }
-}
-@keyframes bgAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
   }
 }
 
@@ -413,6 +413,10 @@ p > img.icone {
 }
 #expproList > li .cats li:not(:last-child)::after {
   content: "-";
+  margin: 5px;
+}
+#expproList > li .cats li:last-child::after {
+  content: "⇀";
   margin: 5px;
 }
 

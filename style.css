@@ -107,7 +107,7 @@ h1::before {
   pointer-events: none;
   user-select: none;
 
-  transition: all 0.3s;
+  transition: width 0.3s, height 0.3s, background-color 0.3s, border-radius 0.3s;
 }
 h1:hover::before {
   --width: 35px;
@@ -405,6 +405,7 @@ p > img.icone {
 
   border-top: var(--width) solid var(--bg-color);
 }
+#expproList > li:focus .cats,
 #expproList > li:hover .cats {
   opacity: 1;
   pointer-events: all;
